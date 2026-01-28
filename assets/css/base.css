@@ -1,0 +1,92 @@
+/* ================================================
+   Teacher Ignarro - Base Styles
+   Global styles, variables and resets
+   ================================================ */
+
+/* === CSS Custom Properties === */
+:root {
+    --color-navy: #001f3f;
+    --color-red: #D80027;
+    --color-blue: #003366;
+    --color-white: #ffffff;
+    --color-light: #f4f4f4;
+    --color-slate-900: #0f172a;
+    
+    --font-sans: 'Raleway', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.4s ease;
+}
+
+/* === Smooth Scrolling === */
+html {
+    scroll-behavior: smooth;
+}
+
+/* === Selection === */
+::selection {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+/* === Focus Styles === */
+:focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+}
+
+/* === Body Scroll Lock === */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* === Smooth Image Loading === */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === Link Resets === */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === Screen Reader Only === */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* === Skip to Content Link === */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-red);
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* === Print Styles === */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
